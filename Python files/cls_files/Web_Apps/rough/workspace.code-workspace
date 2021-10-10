@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../Features"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../../../../Downloads/CSS3"
+		},
+		{
+			"path": "../../../../../../Downloads/Subhash"
+		},
+		{
+			"path": "../insta_clone"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "insta_clone"
+	}
+}

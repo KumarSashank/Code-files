@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+}
+body {
+  background: #f6f6f6;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  margin: 20px;
+}
+#google {
+  margin: 100px 0px 100px 100px;
+  shape-image-threshold: initial;
+  height: 100px;
+  width: auto;
+  background-color: aqua;
+  border-radius: 50%;
+  padding: 10px;
+  outline-style: dashed;
+  outline-offset: 10px;
+  /* Ellipse 7 */
+
+  position: absolute;
+  width: 88px;
+  height: 83px;
+  left: 107px;
+  top: 107px;
+
+  background: #ec3434;
+
+  z-index: 2;
+  border: 2px solid;
+
+  border-image-source: linear-gradient(0deg, #928d90, #928d90),
+    linear-gradient(0deg, #ffffff, #ffffff),
+    linear-gradient(0deg, rgba(255, 92, 112, 0.78), rgba(255, 92, 112, 0.78));
+}
+h1#heading {
+  border-radius: 5px;
+  background-color: paleturquoise;
+  font-size: 4em;
+  width: fit-content;
+  padding: 10px;
+  margin: 10px;
+}
+button {
+  /* Rectangle 7 */
+
+  position: absolute;
+  width: 569px;
+  height: 131px;
+  left: 500px;
+  top: 148px;
+
+  background: #f6f6f6;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  box-sizing: border-box;
+  box-shadow: 4px 7px 25px rgba(0, 0, 0, 0.25);
+  border-radius: 100px;
+}
+
+button:focus {
+  /* Rectangle 7 */
+
+  position: absolute;
+  width: 569px;
+  height: 131px;
+  left: 500px;
+  top: 148px;
+
+  background: #f6f6f6;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset -14px -10px 12px #ffffff,
+    inset 4px 2px 12px rgba(0, 0, 0, 0.16);
+  border-radius: 100px;
+}
