@@ -66,24 +66,26 @@ int main()
         {
             if (ar[i].w > ar[j].w)
             {
-                temp->a = ar[i].a;
-                temp->b = ar[i].b;
-                temp->w = ar[i].w;
+                (*temp) = ar[i];
+                // temp->a = ar[i].a;
+                // temp->b = ar[i].b;
+                // temp->w = ar[i].w;
                 ar[i] = ar[j];
-                ar[j].a = temp->a;
-                ar[j].b = temp->b;
-                ar[j].w = temp->w;
+                // ar[j].a = temp->a;
+                // ar[j].b = temp->b;
+                // ar[j].w = temp->w;
+                ar[j] = (*temp);
             }
         }
-    }
-    for (int i = 0; i < edges; i++)
-    {
-        a = find(ar[i].a);
-        b = find(ar[i].b);
-        if (a != b)
+        for (int i = 0; i < edges; i++)
         {
-            sum += ar[i].w;
-            merge(a, b);
+            a = find(ar[i].a);
+            b = find(ar[i].b);
+            if (a != b)
+            {
+                sum += ar[i].w;
+                merge(a, b);
+            }
         }
     }
     cout << "The mst is " << sum << endl;
