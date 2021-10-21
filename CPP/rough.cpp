@@ -1,52 +1,45 @@
-#include <cmath>
-#include <cstdio>
-#include <vector>
 #include <iostream>
-#include <algorithm>
+#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main()
 {
-    string a, b;
-    cin >> a >> b;
-    int l1 = a.length();
-    int l2 = b.length();
-    int i, j;
-    if (l1 == l2)
+    int t;
+    cin >> t;
+    int pos[t] = {0};
+    int j;
+    for (j = 0; j < t; j++)
     {
-        for (i = 0; i < l1; i++)
+        int x, y;
+        cin >> x >> y;
+        if (x < y)
         {
-            if (a[i] == b[i])
-                cout << "0";
-            else
-                cout << "1";
+            while (x < y)
+            {
+                pos[j] = pos[j] + 1;
+                x = x + 2;
+            }
+            if (x != y)
+            {
+                while (x > y)
+                {
+                    pos[j] = pos[j] + 1;
+                    x = x - 1;
+                }
+            }
+        }
+        else if (x > y)
+        {
+            while (x > y)
+            {
+                pos[j] = pos[j] + 1;
+                x = x - 1;
+            }
         }
     }
-    else if (l1 > l2)
+    for (j = 0; j < t; j++)
     {
-        for (i = 0; i < l1 - l2; i++)
-            cout << a[i];
-        //Here a starts from l1-l2 and b starts from 0.
-        for (i = l1 - l2; i < l1; i++)
-        {
-            if (a[i] == b[i - (l1 - l2)])
-                cout << "0";
-            else
-                cout << "1";
-        }
+        cout << pos[j] << endl;
     }
-    else if (l2 > l1)
-    {
-        for (i = 0; i < l2 - l1; i++)
-            cout << b[i];
-        //Here also b starts from l2-l1 and a starts from 0.
-        for (i = l2 - l1; i < l2; i++)
-        {
-            if (b[i] == a[i - (l2 - l1)])
-                cout << "0";
-            else
-                cout << "1";
-        }
-    }
-    return 0;
 }

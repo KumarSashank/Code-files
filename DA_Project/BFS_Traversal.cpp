@@ -30,6 +30,7 @@ void Graph::BFS(int search)
         visited[i] = false;
     }
     list<int> queue;
+    visited[search] = true;
     queue.push_back(search);
     while (!queue.empty())
     {

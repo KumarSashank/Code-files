@@ -10,7 +10,7 @@ class Graph
 public:
     Graph(int v);
     void addedge(int src, int dest);
-    void DFS(int search);
+    void DFS(int search, int n);
 };
 Graph::Graph(int v)
 {
@@ -21,8 +21,9 @@ void Graph::addedge(int src, int dest)
 {
     adj[src].push_back(dest);
 }
-void Graph::DFS(int search)
+void Graph::DFS(int search, int n)
 {
+    int y = 0;
     bool visited[V];
     for (int i = 0; i < V; i++)
     {
@@ -31,32 +32,28 @@ void Graph::DFS(int search)
 
     stack<int> stack;
 
-    // Push the current source node.
     stack.push(search);
     vector<int>::iterator i;
 
     while (!stack.empty())
     {
-        // Pop a vertex from stack and print it
         int s = stack.top();
         stack.pop();
-
-        // Stack may contain same vertex twice. So
-        // we need to print the popped item only
-        // if it is not visited.
         if (!visited[s])
         {
             cout << s << " ";
             visited[s] = true;
+            y++;
         }
-
-        // Get all adjacent vertices of the popped vertex s
-        // If a adjacent has not been visited, then push it
-        // to the stack.
         for (i = adj[s].begin(); i != adj[s].end(); ++i)
             if (!visited[*i])
                 stack.push(*i);
     }
+    cout << endl;
+    if (y == n)
+        cout << "The graph is connected" << endl;
+    else
+        cout << "The graph is not connected" << endl;
 }
 
 int main()
@@ -80,5 +77,5 @@ int main()
     }
     cout << "From where you want to start : ";
     cin >> start;
-    graph.DFS(start);
+    graph.DFS(start, n);
 }

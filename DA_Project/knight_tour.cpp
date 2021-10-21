@@ -1,20 +1,21 @@
 #include <iostream>
 #include <bits/stdc++.h>
+const int n = 8;
 using namespace std;
 
 class Chess
 {
 public:
-    int isValid(int xNext, int yNext, int sol[8][8]);
-    int starttour();
-    int KnightTour(int sol[8][8], int i, int j, int step_count, int x_move[8], int y_move[8]);
+    bool isValid(int xNext, int yNext, int sol[n][n]);
+    bool starttour();
+    bool KnightTour(int sol[n][n], int i, int j, int step_count, int x_move[8], int y_move[8]);
 };
-int Chess::starttour()
+bool Chess::starttour()
 {
-    int sol[8][8];
-    for (int i = 0; i < 8; i++)
+    int sol[n][n];
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < 8; j++)
+        for (int j = 0; j < n; j++)
         {
             sol[i][j] = -1;
         }
@@ -24,30 +25,30 @@ int Chess::starttour()
     sol[0][0] = 0;
     if (!KnightTour(sol, 0, 0, 1, x_move, y_move))
     {
-        return 0;
+        return false;
     }
     else
     {
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < n; i++)
         {
-            for (int j = 0; j < 8; j++)
+            for (int j = 0; j < n; j++)
             {
                 cout << sol[i][j] << " ";
             }
             cout << endl;
         }
     }
-    return 1;
+    return true;
 };
-int Chess::KnightTour(int sol[8][8], int i, int j, int step_count, int x_move[8], int y_move[8])
+bool Chess::KnightTour(int sol[n][n], int i, int j, int step_count, int x_move[], int y_move[])
 {
     int next_i, next_j;
-    if (step_count == 8 * 8)
+    if (step_count == n * n)
     {
-        return 1;
+        return true;
     }
 
-    for (int k = 0; k < 8; k++)
+    for (int k = 0; k < n; k++)
     {
         next_i = i + x_move[k];
         next_j = j + y_move[k];
@@ -57,7 +58,7 @@ int Chess::KnightTour(int sol[8][8], int i, int j, int step_count, int x_move[8]
             sol[next_i][next_j] = step_count;
             if (KnightTour(sol, next_i, next_j, step_count++, x_move, y_move))
             {
-                return 1;
+                return true;
             }
             else
             {
@@ -65,11 +66,11 @@ int Chess::KnightTour(int sol[8][8], int i, int j, int step_count, int x_move[8]
             }
         }
     }
-    return 0;
+    return false;
 };
-int Chess::isValid(int xNext, int yNext, int sol[8][8])
+bool Chess::isValid(int xNext, int yNext, int sol[n][n])
 {
-    return (xNext >= 0 && xNext < 8 && yNext >= 0 && yNext < 8 && sol[xNext][yNext] == -1);
+    return (xNext >= 0 && xNext < n && yNext >= 0 && yNext < n && sol[xNext][yNext] == -1);
 };
 int main()
 {
