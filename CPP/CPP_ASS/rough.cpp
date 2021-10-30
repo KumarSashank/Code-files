@@ -1,24 +1,19 @@
 #include <iostream>
-#include <string.h>
 using namespace std;
+
+// One function works for all data types. This would work
+// even for user defined types if operator '>' is overloaded
+template <typename T>
+T myMax(T x, T y)
+{
+    return (x > y) ? x : y;
+}
 
 int main()
 {
-    int a[100], count, l, n = 77;
-    int i = 0;
-    string b;
-    while (n > 0)
-    {
-        a[i] = n % 2;
-        n = n / 2;
-        i++;
-    }
-    l = i;
-    for (int i = 0; i < l; i++)
-    {
-        int k = '0';
-        k = k + a[i];
-        b[i] = (char)k;
-    }
-    cout << b << endl;
+    cout << myMax<int>(3, 7) << endl;        // Call myMax for int
+    cout << myMax<double>(3.0, 7.0) << endl; // call myMax for double
+    cout << myMax<char>('g', 'e') << endl;   // call myMax for char
+
+    return 0;
 }
