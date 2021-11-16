@@ -6,7 +6,7 @@ from datetime import datetime
 
 for i in range(10000):
     time.sleep(4)
-    invite=pyautogui.locateCenterOnScreen(r"extension.png",grayscale=True,confidence=.9)
+    invite=pyautogui.locateCenterOnScreen(r"/Users/kumarsashank/Desktop/Code files/Python files/Zoom Bot/extension.png",grayscale=True,confidence=.9)
     print(invite)
     print(i)
     if invite!=None:
