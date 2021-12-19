@@ -1,0 +1,47 @@
+Ramesh and his friends have decided to join the Army. As a part of the selection process, they are asked to form queues according to their chest numbers.
+
+Ramesh is so clever that he doesn’t want to stand in a queue where he will be at front of the queue or at the back of it. He always wants to stand in the middle so that there is an equal number of friends to his front and back, to get an advantage of seeing what the selection process is.
+
+Now, Ramesh decides who will join him in the queue since he knows the chest numbers of his and of all his friends. He has N friends with him.
+
+Ramesh can do one of these adjustments in order to achieve his goal. Ramesh can call or invite a new friend of chest number C or he can simply ignore one or more of his friends in the queue.
+
+He wants to make the adjustments by either adding or removing his friends as soon as possible before the friends realise his intention.
+
+Now your job is to find the total number of inclusions or exclusions Ramesh have to make.
+
+Input Format
+
+Three lines of input, where the first line is T, the number of test cases
+
+The second line has two integers N and c, where N is the total number of friends and c is the chest number of Ramesh.
+
+The third line contains N integers that represent the chest numbers of Ramesh friends.
+
+Constraints
+
+1<= T <= 100
+
+1<= N <= 1000
+
+c,chest number of Ramesh is always an unique value.
+
+Chest numbers of friends is always an unsigned integer.
+
+Output Format
+
+The number of inclusions or exclusions Ramesh made.
+
+Output of each test case is printed on separate lines.
+
+Sample Input 0
+
+2
+3 2
+4 3 1
+1 5
+6
+Sample Output 0
+
+1
+1

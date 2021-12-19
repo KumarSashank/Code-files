@@ -1,45 +1,40 @@
 #include <iostream>
-#include <vector>
 #include <bits/stdc++.h>
 using namespace std;
 
 int main()
 {
-    int t;
+    int t, n, c;
     cin >> t;
-    int pos[t] = {0};
-    int j;
-    for (j = 0; j < t; j++)
+    while (t--)
     {
-        int x, y;
-        cin >> x >> y;
-        if (x < y)
+        cin >> n >> c;
+        int a[n + 1];
+        for (int i = 0; i < n; i++)
         {
-            while (x < y)
+            cin >> a[i];
+        }
+        a[n] = c;
+        sort(a, a + n + 1);
+        int index = 0;
+        for (int i = 0; i < n + 1; i++)
+        {
+            if (a[i] == c)
             {
-                pos[j] = pos[j] + 1;
-                x = x + 2;
-            }
-            if (x != y)
-            {
-                while (x > y)
-                {
-                    pos[j] = pos[j] + 1;
-                    x = x - 1;
-                }
+                index = i;
+                break;
             }
         }
-        else if (x > y)
+        int x = n - index;
+        int y = index - x;
+        if (y < 0)
         {
-            while (x > y)
-            {
-                pos[j] = pos[j] + 1;
-                x = x - 1;
-            }
+            cout << endl
+                 << -y << endl;
         }
-    }
-    for (j = 0; j < t; j++)
-    {
-        cout << pos[j] << endl;
+        else
+        {
+            cout << y << endl;
+        }
     }
 }
