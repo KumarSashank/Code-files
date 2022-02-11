@@ -9,5 +9,9 @@
 # print(set2)
 # set1.update(set2)
 # print(set1)
-a={"a","b","c","d","e","f","g","h"}
-print(len(a))
+# a={"a","b","c","d","e","f","g","h"}
+# print(len(a))
+
+list1=[1,2,3,4,5,6,7,8,]
+list1.pop()
+print(list1)

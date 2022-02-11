@@ -5,6 +5,27 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch lab1_2",
+            "request": "launch",
+            "mainClass": "lab1_2",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch print",
+            "request": "launch",
+            "mainClass": "print",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloWorld",
+            "request": "launch",
+            "mainClass": "HelloWorld",
+            "projectName": "Code files_df776309"
+        },
+        {
             "name": "g++-11 - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",

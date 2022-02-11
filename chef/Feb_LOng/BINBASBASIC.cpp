@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
 
-void getcount(string s, int k)
+void getcount(string s, int k, int N)
 {
-    int len = s.length();
-    int a = len / 2;
+    int len = N;
+    int a = N / 2;
     int count = 0;
     for (int i = 0; i < a; i++)
     {
@@ -13,13 +13,25 @@ void getcount(string s, int k)
             count++;
         }
     }
-    if (count > k)
+    int diff = k - count;
+    if (count <= k)
     {
-        cout << "NO\n";
+        if (N % 2 == 1)
+        {
+            cout << "YES" << endl;
+        }
+        else if (diff % 2 == 0)
+        {
+            cout << "YES" << endl;
+        }
+        else
+        {
+            cout << "NO" << endl;
+        }
     }
     else
     {
-        cout << "YES\n";
+        cout << "NO" << endl;
     }
 }
 
@@ -33,6 +45,6 @@ int main()
         int k, n;
         cin >> n >> k;
         cin >> str;
-        getcount(str, k);
+        getcount(str, k, n);
     }
 }
