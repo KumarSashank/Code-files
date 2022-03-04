@@ -54,5 +54,9 @@
         "optional": "cpp",
         "type_traits": "cpp",
         "utility": "cpp"
-    }
+    },
+    "java.project.sourcePaths": [
+        "Java /Cls Files",
+        "Java /lab/lab2"
+    ]
 }

@@ -6,6 +6,125 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch pyramid",
+            "request": "launch",
+            "mainClass": "pyramid",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch add",
+            "request": "launch",
+            "mainClass": "add",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch reverse",
+            "request": "launch",
+            "mainClass": "reverse",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch calculator",
+            "request": "launch",
+            "mainClass": "calculator",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch guna2",
+            "request": "launch",
+            "mainClass": "guna2",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch guna2$guna$MainClass",
+            "request": "launch",
+            "mainClass": "guna2$guna$MainClass",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch guna$MainClass",
+            "request": "launch",
+            "mainClass": "guna$MainClass",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch maxof3num",
+            "request": "launch",
+            "mainClass": "maxof3num",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch Box",
+            "request": "launch",
+            "mainClass": "Box",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch box",
+            "request": "launch",
+            "mainClass": "box",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch arrray",
+            "request": "launch",
+            "mainClass": "arrray",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch sum",
+            "request": "launch",
+            "mainClass": "sum",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch methods",
+            "request": "launch",
+            "mainClass": "methods",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch maxof3",
+            "request": "launch",
+            "mainClass": "maxof3",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch max1",
+            "request": "launch",
+            "mainClass": "max1",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch max",
+            "request": "launch",
+            "mainClass": "max",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch number_checking",
+            "request": "launch",
+            "mainClass": "number_checking",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
             "name": "Launch lab1_2",
             "request": "launch",
             "mainClass": "lab1_2",
