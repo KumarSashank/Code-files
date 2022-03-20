@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch koushik",
+            "request": "launch",
+            "mainClass": "koushik",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch abstract_bank",
+            "request": "launch",
+            "mainClass": "abstract_bank",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch Bank",
+            "request": "launch",
+            "mainClass": "Bank",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch bank",
+            "request": "launch",
+            "mainClass": "bank",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
             "name": "Launch pyramid",
             "request": "launch",
             "mainClass": "pyramid",
