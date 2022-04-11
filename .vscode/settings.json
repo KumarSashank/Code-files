@@ -56,8 +56,11 @@
         "utility": "cpp"
     },
     "java.project.sourcePaths": [
+        "Java /lab/lab3",
         "Java /lab/lab2",
         "Java /Cls Files",
-        "Java /lab/lab3"
+        "Java /lab/lab4",
+        "Java ",
+        "Java /lab"
     ]
 }

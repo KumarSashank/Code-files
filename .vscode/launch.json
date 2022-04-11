@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch interfaces",
+            "request": "launch",
+            "mainClass": "lab6.interfaces",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch abs",
+            "request": "launch",
+            "mainClass": "lab6.abs",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "lab6.Main",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch poly",
+            "request": "launch",
+            "mainClass": "lab6.poly",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch exc",
+            "request": "launch",
+            "mainClass": "exc",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
             "name": "Launch koushik",
             "request": "launch",
             "mainClass": "koushik",
