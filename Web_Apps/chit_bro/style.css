@@ -1,0 +1,54 @@
+div.border-radius{
+    width:50px;
+    height:50px;
+    border-radius: 5px;
+    background:plum
+    }
+    p#border-img{
+      border:50px solid transparent;
+      padding: 20px ;
+    }
+    div.gradient-tb{
+      height: 200px;
+      background-color: salmon;
+      background-image: linear-gradient(black white);
+      background-image: linear-gradient(180 deg orange rgb(247, 243, 58));
+    }
+    h1#shadows{
+    text-shadow: 5px 5px 10px dodgerblue;
+    }
+    div.transition{
+      width: 500px;
+      height: 500px;
+      background-color: darkolivegreen;
+      transition: width 2s;
+    }
+    div.transition:hover{
+      width:300px;
+    }
+    div.animation{
+      animation-name: first;
+      animation-duration: 4s;
+      width: 100px;
+      height: 100px;
+      background-color:bisque ;
+    }
+    .tooltip{
+      position: relative;
+      position: inline-black;
+      border-bottom: 1px solid black;
+    }
+    .tooltip.tooltiptext{
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: white;
+      text-align: center;
+      border-radius: 6px;
+      padding:5px 0;
+      position: absolute;
+      z-index: 1;
+    }
+    .tooltip:hover.tooltip.tooltiptext{
+      visibility: visible;
+    }

@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch student",
+            "request": "launch",
+            "mainClass": "student",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch guna_hack",
+            "request": "launch",
+            "mainClass": "guna_hack",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch test",
+            "request": "launch",
+            "mainClass": "test",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
+            "name": "Launch q1",
+            "request": "launch",
+            "mainClass": "mid1.q1",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
             "name": "Launch interfaces",
             "request": "launch",
             "mainClass": "lab6.interfaces",

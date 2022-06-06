@@ -1,0 +1,33 @@
+import java.util.concurrent.Semaphore;
+
+public class TeachingAssistant implements Runnable {
+	// Semaphore used to wakeup TA.
+	private SignalSemaphore wakeup;
+	// Semaphore used to wait in chairs outside office.
+	private Semaphore chairs;
+
+	public TeachingAssistant(SignalSemaphore w, Semaphore c, Semaphore a) {
+		wakeup = w;
+		chairs = c;
+	}
+
+	public void run() {
+		for (int i = 0; i < SleepingTA.TA_visit; i++) {
+			try {
+				System.out.println("No students left. The TA is going to nap.");
+				wakeup.release();
+				System.out.println("The TA was woken up by a student.");
+				Thread.sleep(1);
+				// If there are other students waiting.
+				if (chairs.availablePermits() != SleepingTA.chair) {
+					do {
+						Thread.sleep(1);
+						chairs.release();
+					} while (chairs.availablePermits() != SleepingTA.chair);
+				}
+			} catch (InterruptedException e) {
+				continue;
+			}
+		}
+	}
+}
