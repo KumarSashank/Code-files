@@ -1,54 +1,54 @@
-div.border-radius{
-    width:50px;
-    height:50px;
-    border-radius: 5px;
-    background:plum
-    }
-    p#border-img{
-      border:50px solid transparent;
-      padding: 20px ;
-    }
-    div.gradient-tb{
-      height: 200px;
-      background-color: salmon;
-      background-image: linear-gradient(black white);
-      background-image: linear-gradient(180 deg orange rgb(247, 243, 58));
-    }
-    h1#shadows{
-    text-shadow: 5px 5px 10px dodgerblue;
-    }
-    div.transition{
-      width: 500px;
-      height: 500px;
-      background-color: darkolivegreen;
-      transition: width 2s;
-    }
-    div.transition:hover{
-      width:300px;
-    }
-    div.animation{
-      animation-name: first;
-      animation-duration: 4s;
-      width: 100px;
-      height: 100px;
-      background-color:bisque ;
-    }
-    .tooltip{
-      position: relative;
-      position: inline-black;
-      border-bottom: 1px solid black;
-    }
-    .tooltip.tooltiptext{
-      visibility: hidden;
-      width: 120px;
-      background-color: black;
-      color: white;
-      text-align: center;
-      border-radius: 6px;
-      padding:5px 0;
-      position: absolute;
-      z-index: 1;
-    }
-    .tooltip:hover.tooltip.tooltiptext{
-      visibility: visible;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:linear-gradient()
+}
+
+.login {
+  width: 360px;
+  height: min-content;
+  padding: 20px;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.login h1 {
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+.login form {
+  font-size: 20px;
+}
+
+.login form .form-group {
+  margin-bottom: 12px;
+}
+
+.login form input[type="submit"] {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.register{
+  border-radius: 12px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0px 0px 10px rgba(39, 38, 38, 0.1);
+}
+
+.School-name,.Location,.Remember{
+  margin-bottom: 20px;
+}
+.text-center{
+  font-family: 'Poppins', sans-serif;
+}
