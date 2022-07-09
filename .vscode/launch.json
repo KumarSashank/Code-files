@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch day3_1",
+            "request": "launch",
+            "mainClass": "day3_1",
+            "projectName": "Code files_df776309"
+        },
+        {
+            "type": "java",
             "name": "Launch student",
             "request": "launch",
             "mainClass": "student",

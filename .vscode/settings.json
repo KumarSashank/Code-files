@@ -62,6 +62,8 @@
         "Java /lab",
         "Java /Cls Files",
         "Java /databases",
-        "Java /Test"
-    ]
+        "Java /Test",
+        "100days"
+    ],
+    "liveServer.settings.port": 5501
 }
