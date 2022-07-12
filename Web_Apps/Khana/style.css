@@ -1,0 +1,160 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.bg-img {
+    background: url('../khana/rename.jpg');
+    height:100vh;
+    background-size: cover;
+}
+.bg-img:after{
+    position: absolute;
+    content: '';
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background: rgba(0,0,0,0.3);
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 999;
+    width: 380px;
+    text-align: center;
+    padding: 60px 32px;
+    background-color: rgb(255, 255, 255);
+}
+.head{
+    display: flex;
+    justify-content:center;
+}
+.head h3{
+    margin-right: 20px;
+    position: relative;
+    color: black;
+    font-size: 33px;
+    font-weight: 500;
+    margin: 0 0 35px 0;
+    font-family: 'Brush Script MT';
+}
+.head img{
+    margin-right: 20px;
+}
+.login-heading{
+    display: flex;
+    justify-content:flex-start;
+    margin-bottom: 20px;
+}
+.login-heading h4{
+    font-size: 36px;
+}
+.field{
+    position: relative;
+    height: 45px;
+    width:100%;
+    display: flex;
+    background: rgba(248, 245, 245, 0.94);
+}
+.field span{
+    color: #222;
+    width: 40px;
+    line-height: 45px;
+
+}
+.field input{
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border:none;
+    outline: none;
+    color: #222;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+.show{
+    position:absolute;
+    right: 13px;
+    font-size: 11px;
+    font-weight:700;
+    color: #222;
+    cursor: pointer;
+    display: none;
+    font-family: 'Montserrat',sans-serif;
+}
+.password:valid ~ .show{
+    display: block;
+}
+.space{
+    margin-top: 16px;
+}
+.pass{
+    text-align: right;
+    font-size: 13px;
+    margin: 10px 0;
+}
+.pass a{
+    color: rgb(0, 0, 0);
+    font-family: 'Poppins',sans-serif;
+    text-decoration: none;
+}
+.pass:hover a{
+    text-decoration: underline
+}
+input[type="submit"]{
+    background: #dd331d;
+    border-radius: 10px;
+    border: 1px solid #dd331d;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Montserrat',sans-serif;
+}
+input[type="submit"]:hover{
+    background: #d1250e;
+}
+.login{
+    margin: 20px 0;
+    font-family: 'Poppins',sans-serif;
+
+}
+.link{
+    display: flex;
+    cursor: pointer;
+    color: white;
+    margin: 0 0 20px 0;
+}
+.Facebook, .Google{
+    width: 100%;
+    height: 45px;
+    line-height: 45px ;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.Facebook{
+    margin-left: 0px;
+    background: #4267B2;
+    border-radius: 500px;
+}
+.Google{
+    background: #121212;
+    border-radius: 500px;
+}
+.signup{
+    color:black;
+    font-size: 15px;
+    font-family: 'Poppins',sans-serif;
+}
+.signup a{
+    color: #2587c9;
+    text-decoration: none;
+}
+.signup a:hover{
+    text-decoration: underline
+}

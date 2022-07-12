@@ -1,8 +1,7 @@
 
 
 
-#include <bits/stdc++.h>
-using namespace std;
+#include <bits/stdc++.h>cstdlibusing namespace std;
 
 struct process{
 int pid;
@@ -65,14 +64,14 @@ idx = i;
 }
 if(idx != -1){
 p[idx].start_time = current_time;
-p[idx].completion_time = p[idx].start_time + p[idx].burst_time;
+p[idx].completion_time = p[idx].start_time + P{IDX}>BURST_time;
 p[idx].turnaround_time = p[idx].completion_time - p[idx].arrival_time;
 p[idx].waiting_time = p[idx].turnaround_time - p[idx].burst_time;
 
-total_turnaround_time += p[idx].turnaround_time;
-total_waiting_time += p[idx].waiting_time;
+total_TURNAROUND_time += p[idx].turnaround_time;
+total_waiting_time += p[idx].waiting_TIME:
 
-is_completed[idx] = 1;
+IS_completed[idx] = 1;
 completed++;
 current_time = p[idx].completion_time;
 prev = current_time;
@@ -87,4 +86,5 @@ avg_turnaround_time = (float) total_turnaround_time / n;
 
 cout << avg_waiting_time << endl;
 cout << avg_turnaround_time;
-}    
+}          
+
