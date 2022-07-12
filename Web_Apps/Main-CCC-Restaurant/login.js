@@ -14,7 +14,7 @@ function submitform() {
         window.location.href="user.html";
     }
     else if(mail==manager && pass==managerpass){
-        window.location.href="manager.html";
+        window.location.href="1.managerPortal.html";
     }
     else{
         alert("Invalid Email or Password");
