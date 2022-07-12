@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<script src="register.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img src="logo.png" alt="logo">
+</body>
+<div class="log">
+    <div class="container">
+        <span class="title">Register</span>
+        <div class="forms">
+            <div class="form login">
+                <form action="#">
+                    <div class="input-field">
+                        <i class="uil uil-user"></i>
+                        <input type="text" class="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="uil uil-envelope"></i>
+                        <input type="email" class="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="uil uil-lock"></i>
+                        <input type-="password" class="password" placeholder="Password" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="uil uil-lock"></i>
+                        <input type-="password" class="password" placeholder="Re enter password" required>
+                    </div>
+                    <div class="input-field button">
+                        <input type="button" value="Register" cursor="pointer" onclick="submitform()">
+                    </div>
+                    <div class="register">
+                        <span class="text">Already a member?
+                            <a href="#" class="text signup-link" onclick="login()">Login Now</a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</html>
