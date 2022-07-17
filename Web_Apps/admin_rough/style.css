@@ -1,0 +1,209 @@
+*{
+    margin:0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo img{
+    width:auto;
+    height:120px;
+    margin: 0px;
+}
+.logo{
+    width: 30%;
+}
+.navigation{
+    list-style: none;
+    width:60%;
+}
+.navigation ul{
+    display: flex;
+    justify-content: space-around;
+    width:60%;
+}
+.navigation ul li{
+    display: inline-block;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    list-style-type: none;
+}
+.navigation li a{
+    text-decoration: none;
+    color: rgb(22, 21, 21);
+    font-size: 20px;
+}
+header{
+    top: 0px;
+}
+.container_header{
+
+    top:0px;
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+    background-color: #eef2ff;
+    margin-bottom: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container_body{
+    padding: 30px 0px;
+    position: relative;
+    width:100%;
+    height:auto;
+    background-color: #fff;
+}
+.container_body .side_menu{
+    position: absolute;
+    display: inline-block;
+    top: 10px;
+
+    width: 15%;
+    height:auto;
+    background-color: #fff;
+}
+.container_body .food_items{
+    display: inline-block;
+    position: absolute;
+    left:15%;
+    width: 62%;
+    height:auto;
+    background-color: #fff;
+}
+.container_body .cart_page{
+    display: inline-block;
+    position: absolute;
+    right:2%;
+    margin:0px;
+    border: 1px solid black;
+    width: 20%;
+    height:auto;
+    background-color: #fff;
+}
+
+#biryani,#paneer,#chicken,#vegetable,#chinese,#south-indian{
+    margin-top: 40px;   
+}
+#paneer #item-card,#vegetable #item-card{
+    background: rgb(221, 243, 243);
+}
+#chinese #item-card,#south-indian #item-card{
+    background: rgb(221, 243, 243);
+}
+#category-name,.item-menu{
+    margin: 10px;
+    font-size: 35px;   
+    color: rgb(177, 16, 29);
+    font-family: 'Aclonica', sans-serif;
+}
+#item-card{
+    width: 180px;
+    height: 220px;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    background: rgb(221, 243, 243);
+    cursor: pointer;
+    transition: 0.5s all step-end;
+}
+#item-card:hover img{
+    transform: scale(1.2);
+}
+#card-top{
+    display: flex;
+    margin: 5px 0;
+    justify-content: space-between;
+}
+#item-card img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+    margin-bottom: 15px;
+    transition: 0.5s all ease-in-out;
+}
+#item-name{
+    margin: 5px 0;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 200;
+}
+#item-price{
+    margin: 0;
+    color: rgb(2, 27, 27);
+    font-weight: 500;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 200;
+}
+.list-card{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+.list-card:hover{
+    background: rgb(255, 216, 222);
+}
+.list-card:hover img{
+    transition: 0.5s all ease-in-out;
+    transform: scale(1.2);
+}
+.list-card img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.list-name{
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(94, 43, 43);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+}
+.taste-header{
+    padding-top: 40px;
+    padding-bottom: 10px;
+    position: sticky;
+    top: 0;
+    background: whitesmoke;
+}
+
+#food-items{
+    background: whitesmoke;
+    overflow: auto;
+    height: calc(100vh - 86px);
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+.fa-cart-o{
+    padding: 6px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+.toggle-cart{
+    padding: 3px;
+background: #ff6363;
+color: white; 
+transition: all 0.6s ease;
+}
+.toggle-cart:hover{
+    background: #ff0000;
+}
+.toggle-cart::after{
+    content: "added";
+margin-left: 7px;
+}

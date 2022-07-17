@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <header>
+        <div class="container_header">
+            <div class="logo">
+                <img src="logo.png" alt="logo">
+            </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Orders</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a id="contact" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="container_body">
+        <div class="side_menu">
+            <div id="category-list">
+                <p class="item-menu">Hunting Begins Here</p>
+                <div class="border"></div>                
+            </div>
+        </div>
+        <div class="food_items">
+            <div id="food-items" class="d-food-items">
+                <div id="biryani" class="d-biryani">
+                    <p id="category-name">Biryani</p>    
+                </div>
+
+                <div id="chicken" class="d-chicken">
+                    <p id="category-name">Delicious Chicken </p>    
+                </div>
+
+                <div id="paneer" class="d-paneer">
+                    <p id="category-name">Paneer Mania</p>
+                </div>
+
+                <div id="vegetable" class="d-vegetable">
+                    <p id="category-name">Pure Veg Dishes</p> 
+                </div>
+
+                <div id="chinese" class="d-chinese">
+                    <p id="category-name">Chinese Corner</p> 
+                </div>
+
+                <div id="south-indian" class="d-south-indian">
+                    <p id="category-name">South Indian</p>
+                </div>
+            </div>
+        </div>
+        <div class="cart_page">
+            <div id="cart-page" class="cart-toggle">
+                <p id="cart-title">Cart Items</p>
+                <p id="m-total-amount">Total Amout : 100</p>
+                <table>
+                    <thead>
+                        <td>Item</td>
+                        <td>Name</td>
+                        <td>Quantity</td>
+                        <td>Price</td>
+                    </thead>
+                    <tbody id="table-body">
+                        
+                    </tbody>
+                </table>
+                <div class="btn-box">
+                    <button class="cart-btn">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" type="module"></script>
+    <script>
+        document.getElementById("contact").addEventListener("click", function(){
+            // window.location.href = "contact.html";
+            console.log("contact");
+        });
+        document.getElementsByClassName('fa-shopping-cart').addEventListener("click", function(){
+            window.location.href = "cart.html";
+        });
+
+    </script>
+    
+</body>
+</html>
