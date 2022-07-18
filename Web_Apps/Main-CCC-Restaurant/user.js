@@ -1,6 +1,7 @@
 import {foodItem} from './fooditem.js'
 
-
+var name=sessionStorage.getItem('email');
+document.getElementById('username').innerText= name;
 
 function displayItems(){
     var biryani= document.getElementById('biryani');

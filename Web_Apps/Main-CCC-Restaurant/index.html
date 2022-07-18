@@ -73,6 +73,7 @@
     login.addEventListener('click',(e)=>{
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
+    sessionStorage.setItem('email',email);
 
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
@@ -96,6 +97,10 @@
     });
 
     });
+
+    export function register(){
+        window.location.href = "register.html";
+    }
     
   </script>
 
