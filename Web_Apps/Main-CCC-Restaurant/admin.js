@@ -1,3 +1,4 @@
+import { addItem2db } from './add_to_db.js';
 import {foodItem} from './fooditem.js'
 
 
@@ -280,6 +281,122 @@ selectTaste();
 //     item.addEventListener('click',addToCart)
     
 // })
+var add_btn=document.querySelector('.add-item');
+add_btn.addEventListener('click',addItem);
+var tog_flag=0;
+
+//Global declarations
+
+var food_menu=document.getElementById('food-items');
+add_btn.classList.add('add-item-clicked');
+
+
+var add_card=document.createElement('div');
+add_card.setAttribute('class','add-card');
+add_card.setAttribute('id','add-card');
+
+var add_item_box=document.createElement('div');
+add_item_box.setAttribute('class','add-item-box');
+
+var headings= document.createElement('h3');
+headings.innerText='Add Item';
+
+var add_item_form= document.createElement('form');
+add_item_form.setAttribute('id','add-item-form');
+
+var item_id=document.createElement('input');
+item_id.setAttribute('type','number');
+item_id.setAttribute('id','item-id');
+item_id.setAttribute('placeholder','Item ID');
+
+
+var item_name= document.createElement('input');
+item_name.setAttribute('type','text');
+item_name.setAttribute('placeholder','Item Name');
+item_name.setAttribute('id','item-name');
+
+var item_price= document.createElement('input');
+item_price.setAttribute('type','number');
+item_price.setAttribute('placeholder','Item Price');
+item_price.setAttribute('id','item-price');
+
+var item_img= document.createElement('input');
+item_img.setAttribute('type','text');
+item_img.setAttribute('placeholder','Item Link');
+item_img.setAttribute('id','item-img');
+
+var item_category= document.createElement('select');
+item_category.setAttribute('id','item-category');
+
+var biryani= document.createElement('option');
+biryani.setAttribute('value','biryani');
+biryani.innerText='Biryani';
+
+var chicken= document.createElement('option');
+chicken.setAttribute('value','chicken');
+chicken.innerText='Chicken';
+
+var paneer= document.createElement('option');
+paneer.setAttribute('value','paneer');
+paneer.innerText='Paneer';
+
+var vegetable= document.createElement('option');
+vegetable.setAttribute('value','vegetable');
+vegetable.innerText='Vegetable';
+
+var chinese= document.createElement('option');
+chinese.setAttribute('value','chinese');
+chinese.innerText='Chinese';
+
+var southIndian= document.createElement('option');
+southIndian.setAttribute('value','southIndian');
+southIndian.innerText='South Indian';
+
+item_category.appendChild(biryani);
+item_category.appendChild(chicken);
+item_category.appendChild(paneer);
+item_category.appendChild(vegetable);
+item_category.appendChild(chinese);
+item_category.appendChild(southIndian);
+
+var add_item_btn= document.createElement('p');
+add_item_btn.setAttribute('id','add-item-btn');
+add_item_btn.setAttribute('name','add_item_btn');
+add_item_btn.innerText='Add Item';
+
+add_item_form.appendChild(item_id);
+add_item_form.appendChild(item_name);
+add_item_form.appendChild(item_price);
+add_item_form.appendChild(item_img);
+add_item_form.appendChild(item_category);
+add_item_form.appendChild(add_item_btn);
+
+add_item_box.appendChild(headings);
+add_item_box.appendChild(add_item_form);
+
+add_card.appendChild(add_item_box);
+
+
+
+var parent =food_menu.parentNode;
+
+function addItem(){
+    console.log('Added item');
+    if(tog_flag==0){
+        tog_flag=1;
+        
+        parent.replaceChild(add_card,food_menu);
+
+        // add_item_btn.addEventListener('click',addItemToDB);
+    }
+    else{
+        tog_flag=0;
+        parent.replaceChild(food_menu,add_card);
+    }
+
+}
+
+add_item_btn.addEventListener('click',addItem2db);
 
 
 document.querySelectorAll('.uil-trash-alt').forEach(item=>{

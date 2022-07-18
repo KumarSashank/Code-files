@@ -118,6 +118,11 @@ body{
     font-size: 20px;
 }
 
+div.add-item-clicked{
+    display: none;
+
+}
+
 #header select{
     width: 150px;
     overflow: hidden;

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover">
     <title>Admin</title>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -35,7 +36,8 @@
                 <h4>Admin Portal</h4>
                 <div class="right">
                     <div class="util">
-                        <i class="fa fa-cart-plus" id="cart-plus">Add items</i>
+                        <!-- <i class="fa fa-cart-plus" id="cart-plus">Add items</i> -->
+                        <i class="uil uil-create-dashboard add-item" style="font-family:Poppins,sans-serif; font-style: normal;">Add item</i>
                     </div>
                     <div class="user">
                         <i class="fa fa-user-circle" id="circle"> Account</i>
@@ -87,7 +89,46 @@
                 </div>
             </div>
         </div>
-
+        <div class="add-item-clicked">
+            <div class="add-item-box">
+                <div class="add-item-header">
+                    <p>Add Item</p>
+                    <i class="uil uil-angle-left" id="close-add-item"></i>
+                </div>
+                <div class="add-item-body">
+                    <div class="add-item-body-left">
+                        <div class="add-item-body-left-top">
+                            <p>Item Name</p>
+                            <input type="text" id="item-name">
+                        </div>
+                        <div class="add-item-body-left-bottom">
+                            <p>Item Price</p>
+                            <input type="text" id="item-price">
+                        </div>
+                    </div>
+                    <div class="add-item-body-right">
+                        <div class="add-item-body-right-top">
+                            <p>Item Quantity</p>
+                            <input type="text" id="item-quantity">
+                        </div>
+                        <div class="add-item-body-right-bottom">
+                            <p>Item Category</p>
+                            <select id="item-category">
+                                <option value="biryani">Biryani</option>
+                                <option value="chicken">Chicken</option>
+                                <option value="paneer">Paneer</option>
+                                <option value="vegetable">Vegetable</option>
+                                <option value="chinese">Chinese</option>
+                                <option value="southIndian">South Indian</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-item-footer">
+                    <button class="add-item-btn">Add Item</button>
+                </div>
+            </div>
+        </div>
         <div id="cart">
             <div class="taste-header">
                 
@@ -114,7 +155,8 @@
                 <i class="fa fa-map-marker your-address" id="m-add-address"> Your Address</i>
             </div>
             <div class="top-menu">
-                <i class="fa fa-cart-plus" id="m-cart-plus"> 0</i>
+                <!-- <i class="fa fa-cart-plus" id="m-cart-plus"> 0</i> -->
+                <i class="uil uil-create-dashboard"></i>
             </div>
         </div>
         
@@ -152,5 +194,6 @@
         </div>
     </div>
     <script src="admin.js" type="module"></script>
+    
 </body>
 </html>

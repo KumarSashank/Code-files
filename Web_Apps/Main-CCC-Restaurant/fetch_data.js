@@ -46,29 +46,3 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, on
     }).catch((error) => {
     console.error(error);
     });
-
-    // var items_db=[];
-    // get(child(dbRef, `items/`)).then((snapshot) => {
-    //     if (snapshot.exists()) {
-    //         console.log(snapshot.val());
-    //         var item_data = snapshot.val();
-    //         snapshot.forEach((childSnapshot) => {
-    //             var x=childSnapshot.val();
-    //             console.log(x);
-    //             console.log(x.id);
-    //             items_db.push({id: x.id, name: x.name, price: x.price, img: x.img,category: x.category,quantity: x.quantity});
-    //         });
-    //         console.log(items_db);
-    //         sessionStorage.setItem('items_data',JSON.stringify(items_db));
-            
-    //         // sessionStorage.setItem('item_data', JSON.stringify(item_data));
-    //     } else {
-    //         console.log("No data available");
-    //     }
-    //     }).catch((error) => {
-    //     console.error(error);
-    //     });
-
-    // console.log(items_db);
-
-export {items_db};
