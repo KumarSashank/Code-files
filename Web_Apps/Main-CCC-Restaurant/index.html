@@ -73,9 +73,20 @@
     login.addEventListener('click',(e)=>{
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
+    let admin="admin@gmail.com";
+    let adminpass="admin";
+    let manager="manager@gmail.com";
+    let managerpass="manager";
     sessionStorage.setItem('email',email);
 
-        signInWithEmailAndPassword(auth, email, password)
+        if(email==admin && password==adminpass){
+            window.location.href="admin.html";
+        }
+        else if(email==manager && password==managerpass){
+            window.location.href="manager.html";
+        }
+        else{
+            signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
@@ -95,6 +106,7 @@
 
             alert(errorMessage);
     });
+        }
 
     });
 

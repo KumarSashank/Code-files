@@ -308,22 +308,27 @@ var item_id=document.createElement('input');
 item_id.setAttribute('type','number');
 item_id.setAttribute('id','item-id');
 item_id.setAttribute('placeholder','Item ID');
+item_id.setAttribute('required','true');
+item_id.required=true;
 
 
 var item_name= document.createElement('input');
 item_name.setAttribute('type','text');
 item_name.setAttribute('placeholder','Item Name');
 item_name.setAttribute('id','item-name');
+item_name.setAttribute('required','true');
 
 var item_price= document.createElement('input');
 item_price.setAttribute('type','number');
 item_price.setAttribute('placeholder','Item Price');
 item_price.setAttribute('id','item-price');
+item_price.setAttribute('required','true');
 
 var item_img= document.createElement('input');
 item_img.setAttribute('type','text');
 item_img.setAttribute('placeholder','Item Link');
 item_img.setAttribute('id','item-img');
+item_img.setAttribute('required','true');
 
 var item_category= document.createElement('select');
 item_category.setAttribute('id','item-category');
@@ -349,7 +354,7 @@ chinese.setAttribute('value','chinese');
 chinese.innerText='Chinese';
 
 var southIndian= document.createElement('option');
-southIndian.setAttribute('value','southIndian');
+southIndian.setAttribute('value','south indian');
 southIndian.innerText='South Indian';
 
 item_category.appendChild(biryani);

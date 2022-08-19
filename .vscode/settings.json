@@ -63,7 +63,8 @@
         "Java /Cls Files",
         "Java /databases",
         "Java /Test",
-        "100days"
+        "100days",
+        "Leetcode-DSA"
     ],
     "liveServer.settings.port": 5501
 }

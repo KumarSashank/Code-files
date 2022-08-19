@@ -36,6 +36,11 @@ function addItem2db(){
     var category = document.getElementById('item-category').value;
     var quantity=1;
 
+    if(id == '' || name == '' || price == '' || img == '' || category == ''){
+        alert('Please fill all the fields');
+    }
+    else{
+
     console.log(name);
     console.log(price);
     console.log(img);
@@ -60,7 +65,7 @@ function addItem2db(){
         alert(errorMessage);
       // ..
       });
-}
+}}
 
 export { addItem2db };
 
