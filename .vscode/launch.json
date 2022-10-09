@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Code_files_4af8b22a"
+        },
+        {
+            "type": "java",
+            "name": "Launch MinEditDist",
+            "request": "launch",
+            "mainClass": "MinEditDist",
+            "projectName": "Code_files_4af8b22a"
+        },
+        {
+            "type": "java",
             "name": "Launch day3_1",
             "request": "launch",
             "mainClass": "day3_1",
