@@ -20,7 +20,7 @@ int main()
         break;
     case ('Q'):
         cout << "\n quit";
-        break;
+        break; // hola
         return 0;
     }
 }

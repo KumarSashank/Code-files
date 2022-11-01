@@ -1,6 +1,8 @@
 %{
- #include<stdio.h>
-int key=0; %}
+    #include<stdio.h>
+    int key=0;    
+%}
+
 %%
 "int"|"float"|"char"|"while"|"if"|"else"|"do"|"signed"|"unsigned"|"break" {printf("%s is a keyword", yytext);}
 [0-9]+ {printf("Integers with regular expression digt+ ");}
@@ -10,9 +12,7 @@ int key=0; %}
 "//".* {printf("");}
 %%
 int yywrap(){}
-int main()
-{
-    printf("Enter a string: ");
-    yylex();
-    return 0;
-}
+
+int main(){
+    printf("Enter the code\n");
+    return yylex();}

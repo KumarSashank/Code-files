@@ -12,6 +12,7 @@ int lc=0, sc=0, tc=0, ch=0; /*Global variables*/
 ([ ])+ sc++; //space counter
 \t tc++; //tab counter
 . ch++;	 //characters counter
+end return 0;
 %%
 
 int main()

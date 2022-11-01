@@ -1,6 +1,3 @@
-/*Lex program to take check whether
-the given number is even or odd */
-
 %{
 #include<stdio.h>
 int i;
@@ -24,4 +21,3 @@ int main()
 	yylex();
 	return 0;
 }
-

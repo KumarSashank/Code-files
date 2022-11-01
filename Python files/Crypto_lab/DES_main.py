@@ -3,16 +3,13 @@ import hashlib
 from Cryptodome.Cipher import DES
 from secrets import token_bytes
 
+# install the above libraries using pip3 install <library name>
+# pip3 install pycryptodome
+# pip3 install base32hex
+
 key = token_bytes(8)
-# print(type(key))
-# # salt = '\x28\xABdra\xBC\xCD\xDE\xEF\x00\x33'
-# # key = salt
-# # key=hashlib.md5(key.encode('utf-8')).hexdigest()
-# print(key)
 
 h=b'T&Z\xa33\x16\x99\xfb'
-# print(h)
-# print(type(h))
 
 def encrypt(msg):
     cipher = DES.new(h, DES.MODE_EAX)
@@ -31,8 +28,7 @@ def decrypt(nonce, ciphertext, tag):
         return False
 
 nonce, ciphertext, tag = encrypt(input('Enter a message: '))
-# print(nonce)
-# print(tag)
+
 plaintext = decrypt(nonce, ciphertext, tag)
 
 print(f'Cipher text: {ciphertext}')
