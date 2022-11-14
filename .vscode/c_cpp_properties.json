@@ -3,7 +3,8 @@
         {
             "name": "Mac",
             "includePath": [
-                "/usr/local/include"
+                "/usr/local/include",
+                "${workspaceFolder}/Python files/Crypto_lab"
             ],
             "defines": [],
             "macFrameworkPath": [

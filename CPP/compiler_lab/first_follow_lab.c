@@ -1,4 +1,3 @@
-// predictive parser program note: epsilon is denoted by 'e' and sample production is E->+TE|e
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -6,9 +5,9 @@ int main()
 {
     char fin[10][20], st[10][20], ft[20][20], fol[20][20];
     int a = 0, e, i, t, b, c, n, k, l = 0, j, s, m, p;
-    printf("enter the no. of productions\n");
+    printf("Enter the no. of productions: ");
     scanf("%d", &n);
-    printf("enter the productions in a grammar\n");
+    printf("Enter the productions: \n");
     for (i = 0; i < n; i++)
         scanf("%s", st[i]);
     for (i = 0; i < n; i++)
@@ -68,9 +67,9 @@ int main()
             ft[i][l] = '\0';
         }
     }
-    printf("first pos\n");
+    printf("First Positions\n");
     for (i = 0; i < n; i++)
-        printf("FIRS[%c]=%s\n", st[i][0], ft[i]);
+        printf("First[%c]=%s\n", st[i][0], ft[i]);
     fol[0][0] = '$';
     for (i = 0; i < n; i++)
     {
@@ -165,43 +164,63 @@ int main()
         }
         fol[i][l] = '\0';
     }
-    printf("follow pos\n");
+    printf("Follow Positions\n");
     for (i = 0; i < n; i++)
-        printf("FOLLOW[%c]=%s\n", st[i][0], fol[i]);
+        printf("Follow[%c]=%s\n", st[i][0], fol[i]);
     printf("\n");
-    return 0;
+    s = 0;
+    for (i = 0; i < n; i++)
+    {
+        j = 3;
+        while (st[i][j] != '\0')
+        {
+            if ((st[i][j - 1] == '|') || (j == 3))
+            {
+                for (p = 0; p <= 2; p++)
+                {
+                    fin[s][p] = st[i][p];
+                }
+                t = j;
+                for (p = 3; ((st[i][j] != '|') && (st[i][j] != '\0')); p++)
+                {
+                    fin[s][p] = st[i][j];
+                    j++;
+                }
+                fin[s][p] = '\0';
+                if (st[i][t] == 'e')
+                {
+                    b = 0;
+                    a = 0;
+                    while (st[a][0] != st[i][0])
+                    {
+                        a++;
+                    }
+                    while (fol[a][b] != '\0')
+                    {
+                        printf("M[%c,%c]=%s\n", st[i][0], fol[a][b], fin[s]);
+                        b++;
+                    }
+                }
+                else if (!((st[i][t] > 64) && (st[i][t] < 91)))
+                    printf("M[%c,%c]=%s\n", st[i][0], st[i][t], fin[s]);
+                else
+                {
+                    b = 0;
+                    a = 0;
+                    while (st[a][0] != st[i][3])
+                    {
+                        a++;
+                    }
+                    while (ft[a][b] != '\0')
+                    {
+                        printf("M[%c,%c]=%s\n", st[i][0], ft[a][b], fin[s]);
+                        b++;
+                    }
+                }
+                s++;
+            }
+            if (st[i][j] == '|')
+                j++;
+        }
+    }
 }
-/*output
-enter the productions in a grammar
-E->TD
-D->+TD|e
-T->FG
-G->*FG|e
-F->(E)|i
-first pos
-FIRS[E]=(i
-FIRS[D]=+e
-FIRS[T]=(i
-FIRS[G]=*e
-FIRS[F]=(i
-follow pos
-FOLLOW[E]=$)
-FOLLOW[D]=$)
-FOLLOW[T]=+$)
-FOLLOW[G]=+$)
-FOLLOW[F]=*+$)
-
-M[E,(]=E->TD
-M[E,i]=E->TD
-M[D,+]=D->+TD
-M[D,$]=D->e
-M[D,)]=D->e
-M[T,(]=T->FG
-M[T,i]=T->FG
-M[G,*]=G->*FG
-M[G,+]=G->e
-M[G,$]=G->e
-M[G,)]=G->e
-M[F,(]=F->(E)
-M[F,i]=F->i
-*/

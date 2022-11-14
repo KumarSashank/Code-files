@@ -7,7 +7,7 @@ void printArray(char *);
 void FOLLOW(char *result, char c);
 int n;
 char production[20][20];
-main()
+int main()
 {
     int i, j = 0, k, foundNt = 0;
     char c, result[20], nt[20];

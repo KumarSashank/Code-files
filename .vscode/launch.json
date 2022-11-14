@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch client",
+            "request": "launch",
+            "mainClass": "client",
+            "projectName": "Code_files_4af8b22a"
+        },
+        {
+            "type": "java",
+            "name": "Launch server",
+            "request": "launch",
+            "mainClass": "server",
+            "projectName": "Code_files_4af8b22a"
+        },
+        {
+            "type": "java",
+            "name": "Launch diffiehellman",
+            "request": "launch",
+            "mainClass": "diffiehellman",
+            "projectName": "Code_files_4af8b22a"
+        },
+        {
+            "type": "java",
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "Main",
