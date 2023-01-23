@@ -4,7 +4,8 @@
             "name": "Mac",
             "includePath": [
                 "/usr/local/include",
-                "${workspaceFolder}/Python files/Crypto_lab"
+                "${workspaceFolder}/Python files/Crypto_lab",
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1"
             ],
             "defines": [],
             "macFrameworkPath": [

@@ -1,0 +1,21 @@
+-- SQLBook: Code
+-- Active: 1668328388409@@127.0.0.1@3306@employees
+create table employees_t(
+    emp_id int primary key,
+    manag_id int
+);
+create table employees_u(
+    emp_id int primary key,
+    manag_id int
+);
+
+
+insert into employees_t(emp_id,manag_id)
+values(10,1),(5,1);
+insert into employees_u(emp_id,manag_id)
+values(10,1),(5,1);
+
+select emp_id from employees_t where manag_id in
+(select manag_id from employees_u insert into employees_t(emp_id,manag_id)
+values(10,1),(5,1)where emp_id =10);
+

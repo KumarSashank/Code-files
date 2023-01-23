@@ -16,9 +16,9 @@ secretKey = os.urandom(32)  # 256-bit random encryption key
 
 print("Encryption key:", binascii.hexlify(secretKey))
 
-file = open("Python files/Crypto_lab/aes.txt", "r")
-cipher = open("Python files/Crypto_lab/cipher.txt", "w")
-msg = file.read()
+# file = open("Python files/Crypto_lab/aes.txt", "r")
+# cipher = open("Python files/Crypto_lab/cipher.txt", "w")
+msg = input("Enter your name: ")
 
 byte_msg=bytes(msg,'utf-8')
 
@@ -32,7 +32,7 @@ print("encryptedMsg", {
     'aesIV': binascii.hexlify(encryptedMsg[1]),
     'authTag': binascii.hexlify(encryptedMsg[2])
 })
-cipher.write(str(binascii.hexlify(encryptedMsg[0])))
+# cipher.write(str(binascii.hexlify(encryptedMsg[0])))
 
 decryptedMsg = decrypt_AES_GCM(encryptedMsg, secretKey)
 print("decryptedMsg", decryptedMsg)
