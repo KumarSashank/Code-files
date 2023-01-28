@@ -10,8 +10,14 @@ int main()
     {
         cin >> arr[i];
     }
+    if (num == 1)
+    {
+        cout << "yes";
+        return 0;
+    }
     int inc = 0, block = 0, dec = 0;
     int prev = arr[0];
+    int flag = 0;
     for (int i = 1; i < num; i++)
     {
         prev = arr[i - 1];
@@ -23,20 +29,23 @@ int main()
             }
             else
             {
-                cout << "no";
-                return 0;
+                // cout << "no";
+                // return 0;
+                flag = 1;
+                break;
             }
         }
         else if (arr[i] == prev)
         {
-            if ((inc == 1 || inc == 0) && dec == 0)
+            if (((inc == 1) || (inc == 0)) && (dec == 0))
             {
                 block = 1;
+                inc = 1;
             }
             else
             {
-                cout << "no";
-                return 0;
+                flag = 1;
+                break;
             }
         }
         else
@@ -47,11 +56,18 @@ int main()
             }
             else
             {
-                cout << "no";
-                return 0;
+                flag = 1;
+                break;
             }
         }
-        cout << "yes" << endl;
-        return 0;
     }
+    if (flag == 1 || block != 1)
+    {
+        cout << "no";
+    }
+    else
+    {
+        cout << "yes";
+    }
+    return 0;
 }
