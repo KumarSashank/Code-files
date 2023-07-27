@@ -56,6 +56,7 @@
         "utility": "cpp"
     },
     "java.project.sourcePaths": [
+        "Python files/Crypto_lab/Client_Server",
         "Java /lab/lab4",
         "Java /lab/lab3",
         "Java /lab/lab2",
@@ -63,7 +64,7 @@
         "Java /databases",
         "Java /Test",
         "Java /Cls Files",
-        "Python files/Crypto_lab/Client_Server"
+        "networks"
     ],
     "liveServer.settings.port": 5501
 }

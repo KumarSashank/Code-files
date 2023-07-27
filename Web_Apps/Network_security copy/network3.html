@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IPFS File Upload</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <img src="" alt="">
+        </div>
+    </div>
+    <h2>IPFS File Upload</h2>
+    <form>
+      <div class="form-group">
+        <label for="fileInput">Select a File</label>
+        <input type="file" class="form-control-file" id="fileInput">
+      </div>
+      <button type="button" class="btn btn-primary" onclick="uploadFile()">Upload</button>
+      <div id="result"></div>
+    </form>
+  </div>
+
+  <script>
+    function uploadFile() {
+      const projectId = "2Q6xazpc4TxCCUghubOG4QuSBdN";
+      const projectSecret = "a79ca4769fe0cc2e64dc075fe2bcace9";
+      const endpoint = "https://ipfs.infura.io:5001";
+
+      const fileInput = document.getElementById('fileInput');
+      const file = fileInput.files[0];
+
+      const formData = new FormData();
+      formData.append('file', file);
+
+      fetch(endpoint + '/api/v0/add', {
+        method: 'POST',
+        headers: {
+          Authorization: 'Basic ' + btoa(projectId + ':' + projectSecret),
+        },
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        const hash = data.Hash;
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = `<div class="alert alert-success mt-3">
+                                 <a href="https://ipfs.io/ipfs/${hash}" target="_blank">Open IPFS Link</a>
+                               </div>`;
+      })
+      .catch(error => console.error('Error:', error));
+    }
+  </script>
+</body>
+</html>

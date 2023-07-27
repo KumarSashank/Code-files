@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Password",
+            "request": "launch",
+            "mainClass": "Password",
+            "projectName": "Code_files_4af8b22a"
+        },
+        {
+            "type": "java",
+            "name": "VerifyDigitalSignature",
+            "request": "launch",
+            "mainClass": "VerifyDigitalSignature",
+            "projectName": "Code_files_4af8b22a"
+        },
+        {
+            "type": "java",
+            "name": "GenerateDigitalSignature",
+            "request": "launch",
+            "mainClass": "GenerateDigitalSignature",
+            "projectName": "Code_files_4af8b22a"
+        },
+        {
+            "type": "java",
             "name": "Launch client",
             "request": "launch",
             "mainClass": "client",
